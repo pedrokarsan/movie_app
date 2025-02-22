@@ -1,5 +1,3 @@
-![Xcode build](https://github.com/Dimillian/MovieSwiftUI/workflows/Xcode%20build/badge.svg?branch=master)
-
 # MovieSwiftUI
 
 MovieSwiftUI is an application that uses the MovieDB API and is built with SwiftUI. 
@@ -25,5 +23,3 @@ It'll evolve with SwiftUI, every time Apple edits existing or adds new features 
 ## Platforms
 
 Currently MovieSwiftUI runs on iPhone, iPad, and macOS. 
-
-Follow me on [Twitter](https://twitter.com/dimillian) to get the latest update about features, code and SwiftUI tips and tricks! 
