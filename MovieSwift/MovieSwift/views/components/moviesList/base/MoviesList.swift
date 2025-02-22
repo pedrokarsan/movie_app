@@ -116,7 +116,9 @@ struct MoviesList: ConnectedView {
         SearchField(searchTextWrapper: searchTextWrapper,
                     placeholder: "Search any movies or person",
                     isSearching: $isSearching)
-        .onPreferenceChange(OffsetTopPreferenceKey.self) { _ in
+        .accessibilityIdentifier("search_bar")
+        .onPreferenceChange(OffsetTopPreferenceKey.self)
+        { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
     }

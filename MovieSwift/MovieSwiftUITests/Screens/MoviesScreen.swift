@@ -24,12 +24,13 @@ class MoviesScreen: BaseScreen {
     }
     
     func searchMovie(_ movieName: String) {
+        searchBar.waitForExistence(timeout: 5)
         searchBar.tap()
         searchBar.typeText(movieName)
     }
     
     func isMoviesNameContains(_ movieName: String) -> Bool {
-        moviesList.firstMatch.waitForExistence(timeout: 5)
+        XCTAssertTrue(moviesList.firstMatch.waitForExistence(timeout: 5), "Search bar not found.")
         for movie in moviesList.allElementsBoundByIndex {
             if !movie.label.contains(movieName) {
                 return false
@@ -39,7 +40,7 @@ class MoviesScreen: BaseScreen {
     }
     
     func isEmptyMoviesList() -> Bool {
-        noResultLabel.waitForExistence(timeout: 5)
+        XCTAssertTrue(noResultLabel.waitForExistence(timeout: 5), "No results label not found.")
         return moviesList.count == 0 && noResultLabel.exists
     }
 }
