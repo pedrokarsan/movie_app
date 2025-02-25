@@ -8,7 +8,8 @@
 import XCTest
 
 class MovieDetailScreen: BaseScreen {
-    //Actions
+    // Actions
+    // Return bool if title is visible
     func isTitleVisible(_ title: String) -> Bool {
         return app.staticTexts[title].waitToExist(5)
     }
