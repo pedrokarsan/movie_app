@@ -7,6 +7,7 @@
 //
 import XCTest
 
+// A base class for all screen objects in the UI tests
 class BaseScreen {
     let app: XCUIApplication
 
